@@ -1,0 +1,41 @@
+"""Completing the prework file here"""
+
+def hello_name(user_name):
+    """Print a message to greet the user"""
+    user_name = print(f"hello_{user_name}!")
+
+hello_name("johnsmith")
+
+def first_odds():
+    """Prints only odd numbers from 0 to 100"""
+    for n in range(0,101):
+        if n % 2 == 0:
+            continue
+        else:
+            print(n)
+
+first_odds()
+
+def max_num_in_list(a_list):
+    """Prints the biggest number in a list"""
+    return max(a_list)
+
+print(max_num_in_list([3, 16, 40, 31]))
+
+def is_leap_year(a_year):
+    """Returns a boolean regarding whether or not a year is a leap year"""
+    leap_year = (a_year % 100 == 0 and a_year % 400 == 0) or (a_year % 4 
+                                                == 0 and a_year % 100 != 0)
+    return leap_year
+
+print(is_leap_year(1900))
+print(is_leap_year(2000))
+print(is_leap_year(2004))
+
+def is_consecutive(a_list):
+    return sorted(a_list) == list(range(min(a_list), max(a_list) + 1))
+
+consec = [1, 2, 3, 4, 5]
+not_consec = [7, 3, 8, 9, 0]
+print(is_consecutive(consec))
+print(is_consecutive(not_consec))
